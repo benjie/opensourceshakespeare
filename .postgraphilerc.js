@@ -7,21 +7,34 @@ const ENABLE_LDS = false;
 
 module.exports = {
   options: {
-    connection: "sampledb",
-    schema: ["shakespeare"],
-    graphiqlRoute: '/',
-    enhanceGraphiql: true,
-    subscriptions: true,
-    simpleSubscription: false,
-    live: ENABLE_LDS,
+    // Server plugins
     plugins: [
       "@graphile/pg-pubsub"
     ],
+
+    // Schema plugins
     appendPlugins: [
       ENABLE_LDS ? "@graphile/subscriptions-lds" : null,
       "@graphile-contrib/pg-simplify-inflector",
       "postgraphile-plugin-connection-filter"
-    ].filter(_ => _)
+    ].filter(_ => _),
+
+    // Database
+    connection: process.env.DATABASE_URL || "sampledb",
+    schema: ["shakespeare"],
+
+    // GraphiQL
+    graphiqlRoute: '/',
+    enhanceGraphiql: true,
+
+    // Realtime
+    subscriptions: true,
+    simpleSubscription: false,
+    live: ENABLE_LDS,
+
+    // GraphQL schema config
+    simpleCollections: 'both',
+    dynamicJson: true,
   }
 };
 
