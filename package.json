@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "start": "postgraphile --disable-default-mutations --host 0.0.0.0 --port $PORT",
+    "db:reset": "if [ \"$DATABASE_URL\" = \"\" ]; then echo 'No DATABASE_URL envvar; aborting.'; exit 1; fi && psql -X1v ON_ERROR_STOP=1 -f shakespeare.sql \"$DATABASE_URL\"",
     "postgraphile": "postgraphile --watch --disable-default-mutations",
     "load:watch": "nodemon -e sql --watch scripts/schema_pg.sql -x './scripts/load.sh && ./scripts/dump.sh'",
     "watch": "npm_config_loglevel=warn concurrently --kill-others 'npm run load:watch' 'sleep 5 && npm run postgraphile -- --watch'"
