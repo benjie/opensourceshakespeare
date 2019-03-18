@@ -3,9 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "start": "postgraphile --disable-default-mutations --host 0.0.0.0 --port $PORT",
     "postgraphile": "postgraphile --watch --disable-default-mutations",
-    "load:watch": "nodemon -e sql --watch scripts/schema_pg.sql -x './scripts/load.sh'",
-    "start": "npm_config_loglevel=warn concurrently --kill-others 'npm run load:watch' 'sleep 5 && npm run postgraphile'"
+    "load:watch": "nodemon -e sql --watch scripts/schema_pg.sql -x './scripts/load.sh && ./scripts/dump.sh'",
+    "watch": "npm_config_loglevel=warn concurrently --kill-others 'npm run load:watch' 'sleep 5 && npm run postgraphile -- --watch'"
   },
   "dependencies": {
     "@graphile-contrib/pg-simplify-inflector": "^4.0.0-alpha.0",
