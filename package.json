@@ -7,7 +7,7 @@
     "db:reset": "if [ \"$DATABASE_URL\" = \"\" ]; then echo 'No DATABASE_URL envvar; aborting.'; exit 1; fi && psql -X1v ON_ERROR_STOP=1 -f shakespeare.sql \"$DATABASE_URL\"",
     "postgraphile": "postgraphile --watch --disable-default-mutations",
     "load:watch": "nodemon -e sql --watch scripts/schema_pg.sql -x './scripts/load.sh && ./scripts/dump.sh'",
-    "watch": "npm_config_loglevel=warn concurrently --kill-others 'npm run load:watch' 'sleep 5 && npm run postgraphile -- --watch'"
+    "watch": "npm_config_loglevel=warn concurrently --kill-others 'npm run load:watch' \"sleep 5 && nodemon --watch .postgraphilerc.js -x 'npm run postgraphile --watch'\""
   },
   "dependencies": {
     "@graphile-contrib/pg-simplify-inflector": "^4.0.0-alpha.0",
