@@ -9,8 +9,8 @@ This makes a much more interesting data set for sample or demo use than some bor
 You don't need to clone this repository, just create the database and import the dump:
 
 ```
-createdb shakespeare
-curl -L https://raw.githubusercontent.com/benjie/opensourceshakespeare/master/shakespeare.sql | psql shakespeare
+createdb sampledb
+curl -L https://raw.githubusercontent.com/benjie/opensourceshakespeare/master/shakespeare.sql | psql sampledb
 ```
 
 ## Customising
@@ -20,8 +20,8 @@ If you wish to convert the data yourself (and possibly tinker with the process),
 More likely, you just want the data, so create your database and run shakespeare.sql, like so:
 
 ```
-createdb shakespeare
-psql shakespeare < shakespeare.sql
+createdb sampledb
+psql sampledb < shakespeare.sql
 ```
 
 ## Thanks
