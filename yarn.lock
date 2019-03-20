@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@graphile-contrib/pg-many-to-many@^1.0.0-beta.4":
+  version "1.0.0-beta.4"
+  resolved "https://registry.yarnpkg.com/@graphile-contrib/pg-many-to-many/-/pg-many-to-many-1.0.0-beta.4.tgz#5fcf749a465a829f612a60684b7368190c51f973"
+  integrity sha512-Cj7PN5/hk/ibxE7wT1wAeSJarSQHLYw60B0fb9D0TeZYEASj8/8VJCjlZRQI1I5Dlv5t/CF49HgfUlYgurtWYw==
+
 "@graphile-contrib/pg-simplify-inflector@^4.0.0-alpha.0":
   version "4.0.0-alpha.0"
   resolved "https://registry.yarnpkg.com/@graphile-contrib/pg-simplify-inflector/-/pg-simplify-inflector-4.0.0-alpha.0.tgz#e3053b777a9e86051cc2be21de9e8b27ef87ceb0"
@@ -947,14 +952,14 @@ graceful-fs@^4.1.11, graceful-fs@^4.1.2:
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.1.15.tgz#ffb703e1066e8a0eeaa4c8b80ba9253eeefbfb00"
   integrity sha512-6uHUhOPEBgQ24HM+r6b/QwWfZq+yiFcipKFrOFiBEnWdy5sdzYoi+pJeQaPI5qOLRFqWmAXUPQNsielzdLoecA==
 
-graphile-build-pg@4.4.0-beta.5:
-  version "4.4.0-beta.5"
-  resolved "https://registry.yarnpkg.com/graphile-build-pg/-/graphile-build-pg-4.4.0-beta.5.tgz#535d3475a370f57490b9184ceb5b62a9bf3558a5"
-  integrity sha512-AIhVjo3y7+Ktmx6/ZQhkEhcdgvmgNlF9qR5xehkw1RjXSpV3gAFRyUuTmlsBVmmgOeEwwnFF9SOQKkAnxhqEtw==
+graphile-build-pg@4.4.0-beta.6:
+  version "4.4.0-beta.6"
+  resolved "https://registry.yarnpkg.com/graphile-build-pg/-/graphile-build-pg-4.4.0-beta.6.tgz#a74a0e2a3da2bbfab89e3cd464296179fc683c0d"
+  integrity sha512-3PlOVDxjdeoUKlU+Hrqq9JMCmRsdKigASHxskK4Asog6n7admjThBDOE6ddT9KB4AmMh8ZyZBxwxEe8l5kKJ+w==
   dependencies:
     chalk "^2.1.0"
     debug ">=2 <3"
-    graphile-build "4.4.0-beta.5"
+    graphile-build "4.4.0-beta.6"
     graphql-iso-date "^3.6.0"
     jsonwebtoken "^8.1.1"
     lodash ">=4 <5"
@@ -962,10 +967,10 @@ graphile-build-pg@4.4.0-beta.5:
     pg-sql2 "2.2.1"
     postgres-interval "^1.1.1"
 
-graphile-build@4.4.0-beta.5:
-  version "4.4.0-beta.5"
-  resolved "https://registry.yarnpkg.com/graphile-build/-/graphile-build-4.4.0-beta.5.tgz#553d8992ddf75f76f9feb3d36fcb517492d635ba"
-  integrity sha512-J0hf8922wu556PcLblc8bxUqalOgP7/Lrb3rHzDr8ZNLTR489APSGtC5QWIgR8O6tVpgLT4dbc7ywvQDRrwwWg==
+graphile-build@4.4.0-beta.6:
+  version "4.4.0-beta.6"
+  resolved "https://registry.yarnpkg.com/graphile-build/-/graphile-build-4.4.0-beta.6.tgz#ae9da9853401d458778440a68a9e5353efcb48bf"
+  integrity sha512-XLJchB5TQB2SoP54YTJAk8TtATLpqGrjdLRXAJ8yUt2SJQFlMEhP+I/Yc++HC3l3cNn2fXydqn8bgqhxJyuHng==
   dependencies:
     "@types/graphql" "^14.0.3"
     chalk "^2.1.0"
@@ -975,6 +980,14 @@ graphile-build@4.4.0-beta.5:
     lru-cache "^5.0.0"
     pluralize "^7.0.0"
     semver "^5.6.0"
+
+graphile-utils@^4.4.0-beta.6:
+  version "4.4.0-beta.6"
+  resolved "https://registry.yarnpkg.com/graphile-utils/-/graphile-utils-4.4.0-beta.6.tgz#57dc8de0adff325703a03ca377d686749345a2a5"
+  integrity sha512-B8S4xxoBvsgDuKWTimFrRzzLPh+QFeLndbgn/o7RvMyqh1RiOa1B4WSIHEmhXTFWrNDyIDyzD0E5EyVxrO9lZQ==
+  dependencies:
+    debug ">=2 <3"
+    graphql ">=0.9 <0.14 || ^14.0.2"
 
 graphql-iso-date@^3.6.0:
   version "3.6.1"
@@ -996,7 +1009,7 @@ graphql-subscriptions@^1.0.0:
   dependencies:
     iterall "^1.2.1"
 
-"graphql@^0.6.0 || ^0.7.0 || ^0.8.0-b || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.2":
+"graphql@>=0.9 <0.14 || ^14.0.2", "graphql@^0.6.0 || ^0.7.0 || ^0.8.0-b || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.2":
   version "14.1.1"
   resolved "https://registry.yarnpkg.com/graphql/-/graphql-14.1.1.tgz#d5d77df4b19ef41538d7215d1e7a28834619fac0"
   integrity sha512-C5zDzLqvfPAgTtP8AUPIt9keDabrdRAqSWjj2OPRKrKxI9Fb65I36s1uCs1UUBFnSWTdO7hyHi7z1ZbwKMKF6Q==
@@ -1997,24 +2010,24 @@ posix-character-classes@^0.1.0:
   resolved "https://registry.yarnpkg.com/posix-character-classes/-/posix-character-classes-0.1.1.tgz#01eac0fe3b5af71a2a6c02feabb8c1fef7e00eab"
   integrity sha1-AerA/jta9xoqbAL+q7jB/vfgDqs=
 
-postgraphile-core@4.4.0-beta.5:
-  version "4.4.0-beta.5"
-  resolved "https://registry.yarnpkg.com/postgraphile-core/-/postgraphile-core-4.4.0-beta.5.tgz#481307816437b74cd7813e60f79392e93c857eb4"
-  integrity sha512-h0Fawk2LtjyBhyD30zOKTt/EHTFfcrommY/ez92eXPefeH/sidrIIqfWxTQ2dlRLbkgbRkyc7IBMPgGFPiQKtQ==
+postgraphile-core@4.4.0-beta.6:
+  version "4.4.0-beta.6"
+  resolved "https://registry.yarnpkg.com/postgraphile-core/-/postgraphile-core-4.4.0-beta.6.tgz#0b4417ae2a82bbb10c875fd6fcf742ecb9d6fcdf"
+  integrity sha512-WBNjDZlVjCPqS6T9mIuNhGN5jgooK/IGZo38RP3Sod8MoouvZOUb6OsJZ3uEpza5TKihQni6u9cSxBMAiVf7iQ==
   dependencies:
     "@types/graphql" "^14.0.3"
-    graphile-build "4.4.0-beta.5"
-    graphile-build-pg "4.4.0-beta.5"
+    graphile-build "4.4.0-beta.6"
+    graphile-build-pg "4.4.0-beta.6"
 
 postgraphile-plugin-connection-filter@^1.0.0-rc.1:
   version "1.0.0-rc.1"
   resolved "https://registry.yarnpkg.com/postgraphile-plugin-connection-filter/-/postgraphile-plugin-connection-filter-1.0.0-rc.1.tgz#a3e2f96789b8d89e82801c89a78f94ae3990ac52"
   integrity sha512-ThjscY6Dm7dzFqAorLXKFPnZfTHsYjTk51KDnY1+2EcZzPzVUJ4W1ryWGOQswibYDRGVAZHPHLQaC2hKYmROow==
 
-postgraphile@^4.4.0-beta.5:
-  version "4.4.0-beta.5"
-  resolved "https://registry.yarnpkg.com/postgraphile/-/postgraphile-4.4.0-beta.5.tgz#956d5717de6e1c9073bdb06195d995293cdc4104"
-  integrity sha512-AfUhe4Uun0jaI9HZ7Mkt4CAAMsldzWgCvCDV0tuecfd33oXscH2f4oL31e14ERux8VMvUzd8Brxfo1W8DFKkCA==
+postgraphile@^4.4.0-beta.6:
+  version "4.4.0-beta.6"
+  resolved "https://registry.yarnpkg.com/postgraphile/-/postgraphile-4.4.0-beta.6.tgz#59c8901ae950dbd2f27b302cc411d3c3278e1735"
+  integrity sha512-CKTnoS+vK4WMrJqNGokKz//R21vswTVSbwN1u2KonsT9rEEkGcmFULDf7zgH4PbbutV+xRW3aIMDpxxqlMnXHg==
   dependencies:
     "@types/graphql" "^14.0.3"
     "@types/jsonwebtoken" "<7.2.1"
@@ -2034,7 +2047,7 @@ postgraphile@^4.4.0-beta.5:
     pg ">=6.1.0 <8"
     pg-connection-string "^0.1.3"
     pg-sql2 "^2.2.1"
-    postgraphile-core "4.4.0-beta.5"
+    postgraphile-core "4.4.0-beta.6"
     subscriptions-transport-ws "^0.9.15"
     tslib "^1.5.0"
     ws "^6.1.3"
@@ -2065,6 +2078,11 @@ prepend-http@^1.0.1:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/prepend-http/-/prepend-http-1.0.4.tgz#d4f4562b0ce3696e41ac52d0e002e57a635dc6dc"
   integrity sha1-1PRWKwzjaW5BrFLQ4ALlemNdxtw=
+
+prettier@^1.16.4:
+  version "1.16.4"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.16.4.tgz#73e37e73e018ad2db9c76742e2647e21790c9717"
+  integrity sha512-ZzWuos7TI5CKUeQAtFd6Zhm2s6EpAD/ZLApIhsF9pRvRtM1RFo61dM/4MSRUA0SuLugA/zgrZD8m0BaY46Og7g==
 
 process-nextick-args@~2.0.0:
   version "2.0.0"

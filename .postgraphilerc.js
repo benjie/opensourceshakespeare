@@ -16,7 +16,10 @@ module.exports = {
     appendPlugins: [
       ENABLE_LDS ? "@graphile/subscriptions-lds" : null,
       "@graphile-contrib/pg-simplify-inflector",
-      "postgraphile-plugin-connection-filter"
+      "postgraphile-plugin-connection-filter",
+      "@graphile-contrib/pg-many-to-many",
+      // `${__dirname}/PgManyToManySimpleNames.js`, // Too many conflicts to unpick
+      `${__dirname}/CustomRelations.js`,
     ].filter(_ => _),
 
     // Database

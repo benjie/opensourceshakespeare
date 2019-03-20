@@ -7,15 +7,20 @@
     "db:reset": "if [ \"$DATABASE_URL\" = \"\" ]; then echo 'No DATABASE_URL envvar; aborting.'; exit 1; fi && psql -X1v ON_ERROR_STOP=1 -f shakespeare.sql \"$DATABASE_URL\"",
     "postgraphile": "postgraphile --watch --disable-default-mutations",
     "load:watch": "nodemon -e sql --watch scripts/schema_pg.sql -x './scripts/load.sh && ./scripts/dump.sh'",
-    "watch": "npm_config_loglevel=warn concurrently --kill-others 'npm run load:watch' \"sleep 5 && nodemon --watch .postgraphilerc.js -x 'npm run postgraphile --watch'\""
+    "watch": "npm_config_loglevel=warn concurrently --kill-others 'npm run load:watch' \"sleep 5 && nodemon --watch .postgraphilerc.js --watch *.js -x 'npm run postgraphile --watch'\""
   },
   "dependencies": {
+    "@graphile-contrib/pg-many-to-many": "^1.0.0-beta.4",
     "@graphile-contrib/pg-simplify-inflector": "^4.0.0-alpha.0",
     "@graphile/pg-pubsub": "^4.4.0-beta.5",
     "@graphile/subscriptions-lds": "^4.4.0-beta.5",
     "concurrently": "^4.1.0",
+    "graphile-utils": "^4.4.0-beta.6",
     "nodemon": "^1.18.9",
-    "postgraphile": "^4.4.0-beta.5",
+    "postgraphile": "^4.4.0-beta.6",
     "postgraphile-plugin-connection-filter": "^1.0.0-rc.1"
+  },
+  "devDependencies": {
+    "prettier": "^1.16.4"
   }
 }
